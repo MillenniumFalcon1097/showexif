@@ -2,6 +2,9 @@
 
 :laughing: Hope you guys enjoy it!
 
+Click here for [English Readme file](https://github.com/MillenniumFalcon1097/showexif)  
+Click here for [Simplified Chinese version](https://github.com/MillenniumFalcon1097/showexif/blob/master/readmeCN.md)
+
 
 ### Features
 - [X] Accept RAW file and JPEG file as input.
