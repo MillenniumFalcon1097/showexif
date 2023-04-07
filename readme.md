@@ -36,5 +36,5 @@
 
 ### TODO
 
-- [X] Fix the bug when convert RAW to JPEG, the Exif data somehow get lost.
+- [X] Fix the bug when convert RAW to JPEG, the Exif data somehow gets lost.
 
