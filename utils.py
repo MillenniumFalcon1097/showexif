@@ -66,37 +66,35 @@ def read_img_data(args):
             exif_list.append(exif_data)
             img_list.append(os.path.join(args.imgdir,item))
         elif "nef" in item.lower() or "cr" in item.lower() or "arw" in item.lower():
+            exif_dict=piexif.load(os.path.join(args.imgdir,item))
+            exif_data=[]
+            for tag in exif_dict["0th"]:
+                if piexif.TAGS["0th"][tag]["name"]=="Make":
+                    cam_factory=(exif_dict["0th"][tag].decode('utf-8'))
+                elif piexif.TAGS["0th"][tag]["name"]=="Model":
+                    cam_name=(exif_dict["0th"][tag].decode('utf-8'))
+            for tag in exif_dict["Exif"]:
+                if piexif.TAGS["Exif"][tag]["name"]=="ExposureTime":
+                    shutter=list(exif_dict["Exif"][tag])
+                if piexif.TAGS["Exif"][tag]["name"]=="FNumber":
+                    aperture=str(round(exif_dict["Exif"][tag][0]/exif_dict["Exif"][tag][1],1))
+                if piexif.TAGS["Exif"][tag]["name"]=="ISOSpeedRatings":
+                    iso=str(int(exif_dict["Exif"][tag]))
+                if piexif.TAGS["Exif"][tag]["name"]=="FocalLength":
+                    focallength=str(int(exif_dict["Exif"][tag][0]/exif_dict["Exif"][tag][1]))
+                if piexif.TAGS["Exif"][tag]["name"]=="DateTimeOriginal":
+                    datetime=exif_dict["Exif"][tag].decode('utf-8')
+            exif_data.append(cam_factory)
+            exif_data.append(cam_name)
+            exif_data.append(shutter)
+            exif_data.append(aperture)
+            exif_data.append(iso)
+            exif_data.append(datetime)
+            exif_data.append(focallength)
+            exif_list.append(exif_data)
+            img_list.append(os.path.join(args.tmpdir,item.split(".")[0])+".jpg")
             raw2jpg(args,os.path.join(args.imgdir,item))
-    
-    for item in os.listdir(args.tmpdir):
-        exif_dict=piexif.load(os.path.join(args.tmpdir,item))
-        exif_data=[]
-        for tag in exif_dict["0th"]:
-            if piexif.TAGS["0th"][tag]["name"]=="Make":
-                cam_factory=(exif_dict["0th"][tag].decode('utf-8'))
-            elif piexif.TAGS["0th"][tag]["name"]=="Model":
-                cam_name=(exif_dict["0th"][tag].decode('utf-8'))
-        for tag in exif_dict["Exif"]:
-            if piexif.TAGS["Exif"][tag]["name"]=="ExposureTime":
-                shutter=list(exif_dict["Exif"][tag])
-            if piexif.TAGS["Exif"][tag]["name"]=="FNumber":
-                aperture=str(round(exif_dict["Exif"][tag][0]/exif_dict["Exif"][tag][1],1))
-            if piexif.TAGS["Exif"][tag]["name"]=="ISOSpeedRatings":
-                iso=str(int(exif_dict["Exif"][tag]))
-            if piexif.TAGS["Exif"][tag]["name"]=="FocalLength":
-                focallength=str(int(exif_dict["Exif"][tag][0]/exif_dict["Exif"][tag][1]))
-            if piexif.TAGS["Exif"][tag]["name"]=="DateTimeOriginal":
-                datetime=exif_dict["Exif"][tag].decode('utf-8')
-        exif_data.append(cam_factory)
-        exif_data.append(cam_name)
-        exif_data.append(shutter)
-        exif_data.append(aperture)
-        exif_data.append(iso)
-        exif_data.append(datetime)
-        exif_data.append(focallength)
-        exif_list.append(exif_data)
-        img_list.append(os.path.join(args.tmpdir,item))
-    
+     
     return exif_list,img_list
 
 

@@ -19,7 +19,12 @@ Hope you guys enjoy it!
    ```bash
    python showexif.py -imgdir [YOUR_PHOTO_DIR]
    ```
-3. You can specify the two params at the same time.
+3. By default the RAW photos are saved in `tmp`. If you don't need them, use
+   ```bash
+   python showexif.py -nocache
+   ```
+   This will remove all files in `tmp` dir.
+4. You can specify those params at the same time.
 
 ### TODO
 - [X] Accept RAW file and JPEG file as input.
