@@ -4,8 +4,8 @@
 
 :laughing: Hope you guys enjoy it!
 
-Click here for [English Readme file](https://github.com/MillenniumFalcon1097/showexif)  
-Click here for [Simplified Chinese version](https://github.com/MillenniumFalcon1097/showexif/blob/master/readmeCN.md)
+:triangular_flag_on_post: Click here for [English Readme file](https://github.com/MillenniumFalcon1097/showexif)  
+:triangular_flag_on_post: Click here for [Simplified Chinese version](https://github.com/MillenniumFalcon1097/showexif/blob/master/readmeCN.md)
 
 
 ### Features
@@ -34,7 +34,7 @@ Click here for [Simplified Chinese version](https://github.com/MillenniumFalcon1
    ```bash
    python showexif.py -nocache
    ```
-   This will remove all files in `tmp` dir after generating new JPEG images.
+   :warning:This will remove all files in `tmp` dir after generating new JPEG images.
 4. You can specify those params mentioned above at the same time.
 
 

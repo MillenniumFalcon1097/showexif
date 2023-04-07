@@ -4,8 +4,8 @@
 
 :laughing: 希望你们喜欢！
 
-点击 → [英文说明](https://github.com/MillenniumFalcon1097/showexif)  
-点击 → [中文说明](https://github.com/MillenniumFalcon1097/showexif/blob/master/readmeCN.md)
+:triangular_flag_on_post: 点击 → [英文说明](https://github.com/MillenniumFalcon1097/showexif)  
+:triangular_flag_on_post: 点击 → [中文说明](https://github.com/MillenniumFalcon1097/showexif/blob/master/readmeCN.md)
 
 ### 特点
 - [X] 接受 RAW 文件和 JPEG 文件作为输入。
@@ -35,7 +35,7 @@
    ```bash
    python showexif.py -nocache
    ```
-   这将在带水印的图片生成后删除`tmp`目录下的所有文件。
+   :warning:这将在带水印的图片生成后删除`tmp`目录下的所有文件。
 4. 你可以同时指定以上这些参数。
 
 ### TODO
