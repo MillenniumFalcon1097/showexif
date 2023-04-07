@@ -1,5 +1,7 @@
 ## 在你的照片上添加类似小米的EXIF水印
 
+![demo pic](outputs/DCZ_5326.jpg)
+
 :laughing: 希望你们喜欢！
 
 点击 → [英文说明](https://github.com/MillenniumFalcon1097/showexif)  

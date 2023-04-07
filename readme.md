@@ -1,5 +1,7 @@
 ## Add Xiaomi-like EXIF watermark to your photo
 
+![demo pic](outputs/DCZ_5326.jpg)
+
 :laughing: Hope you guys enjoy it!
 
 Click here for [English Readme file](https://github.com/MillenniumFalcon1097/showexif)  
