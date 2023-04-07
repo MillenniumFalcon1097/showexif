@@ -30,5 +30,5 @@ Hope you guys enjoy it!
 - [X] Accept RAW file and JPEG file as input.
 - [X] Adaptable for any width and height images.
 - [X] Can be run by CLI.
-- [ ] Fix the bug when convert RAW to JPEG, the Exif data somehow get lost.
+- [X] Fix the bug when convert RAW to JPEG, the Exif data somehow get lost.
 
