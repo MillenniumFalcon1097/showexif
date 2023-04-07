@@ -1,9 +1,15 @@
 ## Add Xiaomi-like EXIF watermark to your photo
 
-Hope you guys enjoy it!
+:laughing: Hope you guys enjoy it!
+
+
+### Features
+- [X] Accept RAW file and JPEG file as input.
+- [X] Adaptable for any width and height images.
+- [X] Can be run by CLI.
 
 ### Quick start
-1. First you should install all the packages. You cd to the workfolder, and open Windows Powershell or CMD as administrator, and run
+1. First you should install all the packages. But before we start, make sure your PC has a [python 3.x environment](https://www.python.org/downloads/windows/) installed. Then you cd to the workfolder, and open Windows Powershell or CMD as administrator, and run
    ```bash
    pip install -r requirements.txt
    ```
@@ -19,16 +25,16 @@ Hope you guys enjoy it!
    ```bash
    python showexif.py -imgdir [YOUR_PHOTO_DIR]
    ```
-3. By default the RAW photos are saved in `tmp`. If you don't need them, use
+3. By default the JPEG files converted from RAW photos are saved in `tmp`. If you don't need them, use
    ```bash
    python showexif.py -nocache
    ```
-   This will remove all files in `tmp` dir.
-4. You can specify those params at the same time.
+   This will remove all files in `tmp` dir after generating new JPEG images.
+4. You can specify those params mentioned above at the same time.
+
+
 
 ### TODO
-- [X] Accept RAW file and JPEG file as input.
-- [X] Adaptable for any width and height images.
-- [X] Can be run by CLI.
+
 - [X] Fix the bug when convert RAW to JPEG, the Exif data somehow get lost.
 
