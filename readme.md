@@ -42,4 +42,5 @@ Click here for [Simplified Chinese version](https://github.com/MillenniumFalcon1
 ### TODO
 
 - [X] Fix the bug when convert RAW to JPEG, the Exif data somehow gets lost.
+- [ ] Supports more brands...
 
