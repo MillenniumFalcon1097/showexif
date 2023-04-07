@@ -20,7 +20,8 @@
    pip install -r requirements.txt
    ```
 2. 把你的照片放到`imgs`文件夹中。
-3. 运行`python showexif.py`。That's all！
+3. 运行`python showexif.py`。就这么简单！
+4. 生成的jpg图片存放在`outputs`文件夹中。
 
 ### 样例
 1. 要指定生成的图像的存放文件夹，请使用

@@ -20,6 +20,7 @@
    ```
 2. Put your photos into the `imgs` folder.
 3. Run `python showexif.py`. That's all!
+4. The gererated .jpg images are saved into `outputs` folder.
 
 ### Demo
 1. To specify the folder where the generated images will be stored, use
